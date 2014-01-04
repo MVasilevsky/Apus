@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>Messages</param-value>
+    </context-param>
+    
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>apus.servlet.MainServlet</servlet-class>
+        <init-param>
+            <param-name>url</param-name> 
+            <param-value>jdbc:mysql://localhost:3306/apus?characterEncoding=utf8</param-value> 
+        </init-param>
+        <init-param>
+            <param-name>login</param-name> 
+            <param-value>root</param-value> 
+        </init-param>
+        <init-param>
+            <param-name>password</param-name> 
+            <param-value>12345</param-value> 
+        </init-param>
+        <init-param>
+            <param-name>driver</param-name> 
+            <param-value>com.mysql.jdbc.Driver</param-value> 
+        </init-param>
+        <init-param>
+            <param-name>cpsize</param-name> 
+            <param-value>3</param-value> 
+        </init-param>
+    </servlet>
+ 
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>apus.servlet.SessionServlet</servlet-class>
+    </servlet>
+    
+    <!-- Servlets mappings -->
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>/start.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Unicode filter -->
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>apus.servlet.CharsetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+    
+</web-app>

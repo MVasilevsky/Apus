@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>apus</short-name>
+  <uri>/WEB-INF/tlds/apuslibrary</uri>
+  <tag-file>
+    <name>bootstrap</name>
+    <path>/WEB-INF/tags/apus/bootstrap.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>footer</name>
+    <path>/WEB-INF/tags/apus/footer.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>loginFail</name>
+    <path>/WEB-INF/tags/apus/loginFail.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>navtabs</name>
+    <path>/WEB-INF/tags/apus/navtabs.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>top</name>
+    <path>/WEB-INF/tags/apus/top.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>winModal</name>
+    <path>/WEB-INF/tags/apus/winModal.tag</path>
+  </tag-file>
+</taglib>
